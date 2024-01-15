@@ -1,6 +1,5 @@
 # ALX HIGHER LEVEL PROGRAMMING AND ALGORITHMS
 
-![python photo](alx-higher_level_programming/photo/python _logo.png)
 ![python photo](https://camo.githubusercontent.com/3939859066f892b0de3ca1282db48e2215f008daee504d63327216ad5aa0ad72/68747470733a2f2f7777772e706e67616c6c2e636f6d2f77702d636f6e74656e742f75706c6f6164732f352f507974686f6e2d504e472d506963747572652e706e67)
 
 #### This repository contains programs created with the intention of understanding Higher level programming and algorithms using PYTHON PROGRAMMING LANGUAGE to solve common programming task during my SOFTWARE ENGINEERING studies @ ALX_SE cohort 21
