@@ -9,4 +9,3 @@ while digit1 <= 56:
             print("{}{}, ".format(chr(digit1), chr(digit2)), end='')
         digit2 += 1
     digit1 += 1
-
