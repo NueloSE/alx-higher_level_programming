@@ -6,12 +6,12 @@ zero = " and is 0"
 less = " and is less than 6 and not 0"
 # number = -6718
 if number < 0:
-	last_number = (abs(number) % 10) * -1
+    last_number = (abs(number) % 10) * -1
 else:
-	last_number = number % 10
+    last_number = number % 10
 if last_number > 5:
-	print(f"Last digit of {number:d} is {last_number:d}" + greater)
+    print(f"Last digit of {number:d} is {last_number:d}" + greater)
 elif last_number == 0:
-	print(f"Last digit of {number:d} is {last_number:d}" + zero)
+    print(f"Last digit of {number:d} is {last_number:d}" + zero)
 else:
-	print(f"Last digit of {number:d} is {last_number:d}" + less)
+    print(f"Last digit of {number:d} is {last_number:d}" + less)
