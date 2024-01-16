@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-ascii_val = 97
-while ascii_val < 123:
-	print(f"{chr(ascii_val)}", end='')
-	ascii_val += 1
+for i in range(ord('a'), ord('z') + 1):
+    print(f"{chr(i)}", end='')
