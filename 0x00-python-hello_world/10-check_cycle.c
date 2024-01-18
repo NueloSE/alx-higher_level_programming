@@ -15,10 +15,6 @@ int check_cycle(listint_t *list)
 		tmp = tmp->next;
 	}
 	if (tmp == NULL)
-	{
-		free(tmp);
 		return (0);
-	}
-	free(tmp);
 	return (1);
 }
