@@ -8,7 +8,7 @@ if __name__ == "__main__":
     multiplication = cal.mul(a, b)
     division = cal.div(a, b)
 
-    print("{} + {} = {}".format(a, b, addition))
-    print("{} - {} = {}".format(a, b, subtraction))
-    print("{} * {} = {}".format(a, b, multiplication))
-    print("{} / {} = {}".format(a, b, division))
+    print("{:d} + {:d} = {:d}".format(a, b, addition))
+    print("{:d} - {:d} = {:d}".format(a, b, subtraction))
+    print("{:d} * {:d} = {:d}".format(a, b, multiplication))
+    print("{:d} / {:d} = {:d}".format(a, b, division))
