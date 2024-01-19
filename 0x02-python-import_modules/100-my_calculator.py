@@ -2,6 +2,7 @@
 from calculator_1 import add, sub, mul, div
 import sys
 
+
 def sign_check(sign):
     idx = 0
     signs = ['+', '-', '*', '/']
@@ -11,9 +12,11 @@ def sign_check(sign):
         idx += 1
     return -1
 
+
 def calculation(num1, num2, operand):
     operands = [add, sub, mul, div]
     return (operands[operand](num1, num2))
+
 
 if __name__ == "__main__":
 
