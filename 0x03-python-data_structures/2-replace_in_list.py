@@ -8,7 +8,7 @@ def _len(my_list):
 
 def replace_in_list(my_list, idx, element):
     list_len = _len(my_list)
-    if (idx < 0) | (idx > list_len):
+    if (idx < 0) | (idx >= list_len):
         return my_list
     my_list[idx] = element
     return (my_list)
