@@ -5,7 +5,7 @@ def print_matrix_integer(matrix=[[]]):
 
     for rowIdx in range(row_num):
         for colIdx in range(col_num):
-            print("{}".format(matrix[rowIdx][colIdx]), end="")
+            print("{:d}".format(matrix[rowIdx][colIdx]), end="")
             if colIdx == col_num - 1:
                 break
             else:
