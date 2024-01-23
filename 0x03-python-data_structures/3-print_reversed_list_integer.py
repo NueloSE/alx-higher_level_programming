@@ -7,8 +7,7 @@ def _len(my_list):
 
 
 def print_reversed_list_integer(my_list=[]):
-    if (my_list == None):
-        print()
+    if my_list is None:
         exit()
     list_len = _len(my_list) - 1
     while list_len >= 0:
