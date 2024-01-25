@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     numRow = len(matrix)
-    if (numRow == 0) or ((len(matrix[0])) == 0):
+    if (numRow == 0):
         return []
 
     numCol = len(matrix[0])
