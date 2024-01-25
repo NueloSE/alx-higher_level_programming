@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     max_key = None
-    if a_dictionary == None:
+    if (a_dictionary == None) | (a_dictionary == {}):
         return max_key
     max_val = next(iter(a_dictionary.values()))
     for key, val in a_dictionary.items():
