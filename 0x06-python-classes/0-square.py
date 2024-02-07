@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+"""
+This module help the learner understand OOP
+
+This module has a class Square
+
+Discription of the Square class can be found in the Square class def
+"""
+
 class Square():
     """
     This class is an empty class
