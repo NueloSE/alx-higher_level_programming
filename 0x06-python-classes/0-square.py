@@ -4,5 +4,7 @@ The only function carried out by this class
 Is creates an instance of the class without
 any attribute or method.
 """
+
+
 class Square():
     pass
