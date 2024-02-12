@@ -11,8 +11,8 @@ triangle of different size and propertes
 class Rectangle:
     """
     This class is all about an object of rectangle type
-
-    it performs several operations on a triangle
+    The class contains some attributes and methods
+    it performs several operations on a rectangle
     """
     def __init__(self, width=0, height=0):
         """
@@ -20,14 +20,15 @@ class Rectangle:
         @width: the width of the rectangle
         @height: indicates the hieght of the rectangle
         """
-        self.__width = int(width)
-        self.__height = int(height)
+        self.width = int(width)
+        self.height = int(height)
 
     @property
     def width(self):
         """
         This method has been decorated to be a getter
         it gets the value of width
+        return the value of width
         """
         return self.__width
 
@@ -36,6 +37,7 @@ class Rectangle:
         """
         This method is decorated as a setter
         it sets the value of width
+        returns no value
         """
         if not (isinstance(value, int)):
             raise TypeError("width must be an integer")
@@ -49,6 +51,7 @@ class Rectangle:
         """
         This method has been decorated to be a getter
         it gets the value of height
+        returns the height of a rectangle
         """
         return self.__height
 
@@ -57,6 +60,7 @@ class Rectangle:
         """
         This method is decorated as a setter
         it sets the value of width
+        computes the height of the rectangle
         """
         if not (isinstance(value, int)):
             raise TypeError("height must be an integer")
