@@ -125,5 +125,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        size = int(size)
+        if size < 0:
+            size = 0
         newRectangle = cls(size, size)
         return newRectangle
