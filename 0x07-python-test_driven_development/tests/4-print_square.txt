@@ -1,0 +1,47 @@
+===============================
+Testing ``print_square`` module
+===============================
+
+import ``print_square`` function from ``4-print_square`` module
+---------------------------------------------------------------
+
+::
+    >>> ps = __import__('4-print_square').print_square
+
+Usage:
+------
+Passing an integer to ps
+::    
+    >>> ps(2)
+    ##
+    ##
+
+    >>> ps(0)
+
+passing a character
+    >>> ps('a')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+passing no argument
+    >>> ps()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+passing float value
+    >>> ps(0.7)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> ps(7.34)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+passing int and nan
+    >>> ps(float('inf'))
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> ps(float('nan'))
+    Traceback (most recent call last):
+    TypeError: size must be an integer
