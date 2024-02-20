@@ -51,3 +51,22 @@ passing a matrix with a character element
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+passing a zero argument
+
+::
+    >>> m = [[1,2,'3'],[4,5,6]]
+    >>> print(matrix_divided())
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+passing a one argument
+
+::
+    >>> m = [[1,2,'3'],[4,5,6]]
+    >>> print(matrix_divided(m))
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
