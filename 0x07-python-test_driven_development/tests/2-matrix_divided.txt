@@ -55,7 +55,7 @@ passing a matrix with a character element
 passing a zero argument
 
 ::
-    >>> m = [[1,2,'3'],[4,5,6]]
+    >>> m = [[1,2, 3],[4,5,6]]
     >>> print(matrix_divided())
     Traceback (most recent call last):
         ...
@@ -64,9 +64,15 @@ passing a zero argument
 passing a one argument
 
 ::
-    >>> m = [[1,2,'3'],[4,5,6]]
+    >>> m = [[1,2, 3],[4,5,6]]
     >>> print(matrix_divided(m))
     Traceback (most recent call last):
         ...
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
+Division by inifinite number
+
+::
+    >>> m = [[1,2,3],[4,5,6]]
+    >>> print(matrix_divided(m, float('inf')))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
