@@ -1,0 +1,47 @@
+=============================================================
+Testing ``text_indentation`` in ``5-text_indentation`` module
+=============================================================
+
+import the function
+-------------------
+
+::
+    >>> ti = __import__('5-text_indentation').text_indentation
+
+Usage:
+------
+
+Testing regular plain text without delimiter
+
+::
+    >>> ti("Hello this Nuel")
+    Hello this Nuel
+    >>> ti("Hello.this.nuel")
+    Hello.
+    <BLANKLINE>
+    this.
+    <BLANKLINE>
+    nuel
+
+    >>> ti("Hello.nuel? how are you: nuel")
+    Hello.
+    <BLANKLINE>
+    nuel?
+    <BLANKLINE>
+    how are you:
+    <BLANKLINE>
+    nuel
+
+Passing number
+
+::
+    >>> ti(2)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+missing one argument
+
+::
+    >>> ti()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
