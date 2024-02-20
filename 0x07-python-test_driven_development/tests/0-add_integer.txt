@@ -87,3 +87,7 @@ Fails when inifinity is passed
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
+
+Fails when NaN is passed
+::
+    >>> add_integer(float('nan))
