@@ -5,10 +5,11 @@ It takes 2 arguments a and b
 a and b must be integer
 The function doesn't work with string"""
 
+
 def add_integer(a, b=98):
-    """it can work with just one argument and automatically set the second as 98
-    Returns:
-        a + b
+    """it can work with just one argument and automatically
+    set the second as 98
+    Returns: a + b
     """
     if not (isinstance(a, int) | isinstance(a, float)):
         raise TypeError("a must be an integer")
