@@ -45,3 +45,8 @@ passing int and nan
     >>> ps(float('nan'))
     Traceback (most recent call last):
     TypeError: size must be an integer
+
+passing negative integer
+>>> ps(-2)
+Traceback (most recent call last):
+ValueError: size must be >= 0
