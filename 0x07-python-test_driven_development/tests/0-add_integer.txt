@@ -90,7 +90,7 @@ Fails when inifinity is passed
 
 Fails when NaN is passed
 ::
-    >>> add_integer(float('nan))
+    >>> add_integer(float('nan'))
     Traceback (most recent call last):
         ...
     ValueError: cannot convert float NaN to integer
