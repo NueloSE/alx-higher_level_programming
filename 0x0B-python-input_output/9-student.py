@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+A module with as simple class Student
+
+"""
 
 
 class Student:
