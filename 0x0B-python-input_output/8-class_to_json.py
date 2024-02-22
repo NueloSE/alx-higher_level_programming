@@ -14,7 +14,7 @@ Usage:
     obj = MyClass()
     serialized_data = class_to_json(obj)
 """
-import json
+json_module = __import__('json')
 
 
 def class_to_json(obj):
@@ -31,4 +31,4 @@ def class_to_json(obj):
     Raises:
         TypeError: If the object is not an instance of a class.
     """
-    return json.dumps(obj.__dict__)
+    return json_module.dumps(obj.__dict__)
