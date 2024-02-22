@@ -16,6 +16,4 @@ while i < len(sys.argv):
     mylist.append(sys.argv[i])
     i += 1
 
-print(mylist)
-print(type(mylist))
 dumper(mylist, 'add_item.json')
