@@ -1,6 +1,28 @@
 #!/usr/bin/python3
+"""
+This module contains one function that performs matrix multiplication
+Between two matrix A matrix B
+"""
 
 def matrix_mul(m_a, m_b):
+    """
+    Perform matrix multiplication between two matrices.
+
+    Parameters:
+    - m_a (list of lists): The first matrix represented as a list of lists.
+    - m_b (list of lists): The second matrix represented as a list of lists.
+
+    Returns:
+    - list of lists: The resulting matrix after the multiplication operation.
+
+    Raises:
+    - TypeError: If m_a or m_b is not a list, not a list of lists, or contains elements other than integers or floats.
+    - ValueError: If m_a or m_b is empty or if the matrices are not compatible for multiplication.
+
+    Example:
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+    """
     if not (type(m_a) is list):
         raise TypeError('m_a must be a list')
     if not (type(m_b) is list):
