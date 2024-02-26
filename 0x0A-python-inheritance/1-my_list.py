@@ -23,4 +23,6 @@ class MyList(list):
         Raises:
             None
         """
-        print(sorted(self))
+        sorted_matrix = sorted(self)
+        print(sorted_matrix)
+        return sorted_matrix
