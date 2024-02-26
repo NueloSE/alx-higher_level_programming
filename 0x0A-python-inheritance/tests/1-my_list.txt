@@ -1,0 +1,23 @@
+=======================
+Test module `1-my_list`
+=======================
+
+import module
+-------------
+
+::
+    >>> MyList = __import__('1-my_list').MyList
+
+Tasting with proper test values
+-------------------------------
+
+:: 
+    >>> a = MyList()
+    >>> a.append(2)
+    >>> a.append(4)
+    >>> a.append(1)
+    >>> a.append(-2)
+    >>> print(a)
+    [2, 4, 1, -2]
+    >>> a.print_sorted()
+    [-2, 1, 2, 4]
