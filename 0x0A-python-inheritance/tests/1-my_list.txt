@@ -22,6 +22,7 @@ Tasting with proper test values
     >>> a.print_sorted()
     [-2, 1, 2, 4]
 
+
 Testing on an empty list
 ------------------------
 
