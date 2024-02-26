@@ -21,3 +21,12 @@ Tasting with proper test values
     [2, 4, 1, -2]
     >>> a.print_sorted()
     [-2, 1, 2, 4]
+
+Testing on an empty list
+------------------------
+
+::
+    >>> a = []
+    >>> a.print_sorted()
+    Traceback (most recent call last):
+    AttributeError: 'list' object has no attribute 'print_sorted'
