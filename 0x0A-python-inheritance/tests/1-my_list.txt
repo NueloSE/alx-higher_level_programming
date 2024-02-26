@@ -26,7 +26,6 @@ Testing on an empty list
 ------------------------
 
 ::
-    >>> a = MyList
+    >>> a = MyList()
     >>> a.print_sorted()
-    Traceback (most recent call last):
-    TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
+    []
