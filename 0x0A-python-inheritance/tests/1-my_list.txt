@@ -21,6 +21,10 @@ Tasting with proper test values
     [2, 4, 1, -2]
     >>> a.print_sorted()
     [-2, 1, 2, 4]
+    >>> sorted_a = a.print_sorted()
+    [-2, 1, 2, 4]
+    >>> sorted_a == [-2, 1, 2, 4] and sorted_a is not a
+    False
 
 
 Testing on an empty list
@@ -28,5 +32,8 @@ Testing on an empty list
 
 ::
     >>> a = MyList()
-    >>> a.print_sorted()
+    >>> sorted_a = a.print_sorted()
     []
+    >>> sorted_a
+    >>> sorted_a == [] and sorted_a is not a
+    False
