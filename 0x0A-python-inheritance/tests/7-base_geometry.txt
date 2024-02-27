@@ -38,12 +38,18 @@ The second is zero or negative
 Test with one argument:
 -----------------------
 ::
-    >>> bg.integer_validator("something") # doctest:+NORMALIZE_WHITESPACE
+    >>> bg.integer_validator("something")
     Traceback (most recent call last):
         ...
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-    >>> bg.integer_validator() # doctest:+NORMALIZE_WHITESPACE
+    >>> bg.integer_validator()
     Traceback (most recent call last):
         ...
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Checking for only 1 argument to integer_validator:
+    >>> bg.integer_validator("integer")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
