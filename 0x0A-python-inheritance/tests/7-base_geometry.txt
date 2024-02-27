@@ -20,6 +20,7 @@ The second argument is float or string
     >>> bg.integer_validator("Nuelo", 32.3)
     Traceback (most recent call last):
     TypeError: Nuelo must be an integer
+
     >>> bg.integer_validator("Nuelo", '32.3')
     Traceback (most recent call last):
     TypeError: Nuelo must be an integer
@@ -48,8 +49,31 @@ Test with one argument:
         ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-Checking for only 1 argument to integer_validator:
-    >>> bg.integer_validator("integer")
+Test for area()
+---------------
+
+    >>> bg.area()
     Traceback (most recent call last):
-        ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    Exception: area() is not implemented
+
+Testing for non integer
+-----------------------
+    >>> bg.integer_validator("int", (4,))
+    Traceback (most recent call last):
+    TypeError: int must be an integer
+    
+    >>> bg.integer_validator('int', [3])
+    Traceback (most recent call last):
+    TypeError: int must be an integer
+    
+    >>> bg.integer_validator('int', True)
+    Traceback (most recent call last):
+    TypeError: int must be an integer
+
+    >>> bg.integer_validator('int', {3,5})
+    Traceback (most recent call last):
+    TypeError: int must be an integer
+
+    >>> bg.integer_validator('int', None)
+    Traceback (most recent call last):
+    TypeError: int must be an integer
