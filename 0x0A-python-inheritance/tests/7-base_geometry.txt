@@ -12,14 +12,6 @@ Test with valid argument:
     >>> bg = base()
     >>> bg.integer_validator("some", 43)
 
-Test with one argument:
------------------------
-::
-    >>> bg.integer_validator("something") # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-        ...
-    TypeError: BaseGeometry.integer_validator()
-    missing 1 required positional argument: 'value'
     
 The second argument is float or string
 --------------------------------------
@@ -42,4 +34,16 @@ The second is zero or negative
     >>> bg.integer_validator('okay', -4)
     Traceback (most recent call last):
     ValueError: okay must be greater than 0
-    
+
+Test with one argument:
+-----------------------
+::
+    >>> bg.integer_validator("something") # doctest:+NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+        ...
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator() # doctest:+NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+        ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
