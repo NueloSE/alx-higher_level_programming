@@ -66,7 +66,7 @@ Testing for non integer
     Traceback (most recent call last):
     TypeError: list must be an integer
     
-    >>> bg.integer_validator('bool', True)
+    >>> bg.integer_validator("age", True)
     
 
     >>> bg.integer_validator('dict', {3,5})
