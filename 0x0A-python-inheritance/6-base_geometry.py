@@ -2,10 +2,11 @@
 """ Module name: 6-base_geometry"""
 
 
-class BaseGeometry(Exception):
+class BaseGeometry():
     """The class contains an initializer and area method"""
     def __init__(self):
         """An initialize with just a pass"""
+        super().__init__()
         pass
 
     def area(self):
