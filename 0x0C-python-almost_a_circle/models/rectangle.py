@@ -22,6 +22,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def update(self, *args, **kwargs):
+        """Enable attributes of and instance to be updated"""
         if len(args) > 0:
             attrs = ['id', 'width', 'height', 'x', 'y']
             for attr, value in zip(attrs, args):
