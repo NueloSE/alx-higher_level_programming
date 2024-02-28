@@ -21,6 +21,15 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    def update(self, *args, **kwargs):
+        if len(args) > 0:
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for attr, value in zip(attrs, args):
+                setattr(self, attr, value)
+        else:
+            for key, val in kwargs.items():
+                setattr(self, key, val)
+
     def __str__(self):
         """Allows for printing format str to stdout"""
         return (
