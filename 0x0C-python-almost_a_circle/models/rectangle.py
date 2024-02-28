@@ -21,20 +21,42 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    def __str__(self):
+        """Allows for printing format str to stdout"""
+        return (
+            f"[Rectangle] ({self.id}) "
+            f"{self.__x}/{self.__y} - "
+            f"{self.__width}/{self.__height}"
+        )
+
+    def display(self):
+        """Prints in stdout the Rectangle with the character #"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print('#', end='')
+            print()
+
+    def area(self):
+        """Returns width * height i.e area of the rectangle"""
+        return self.__width * self.__height
+
     @staticmethod
     def _is_int(kwargv):
+        """A validator to ensure only integer values is passed"""
         for key, value in kwargv.items():
             if not isinstance(value, int):
                 raise TypeError(f"{key} must be an integer")
 
     @staticmethod
     def _greater_than_zero(kwargv):
+        """A validator to ensure that width and height is a positive int"""
         for key, value in kwargv.items():
             if value <= 0:
                 raise ValueError(f"{key} must be > 0")
 
     @staticmethod
     def _less_than_zero(kwargv):
+        """A validator to ensure x and y is not negative"""
         for key, value in kwargv.items():
             if value < 0:
                 raise ValueError(f'{key} must be >= 0')
