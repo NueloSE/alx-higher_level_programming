@@ -21,6 +21,14 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    def to_dictionary(self):
+        """Returns a dictionary of class attributes"""
+        new_dic = {
+            'x': self.x, 'y': self.y, 'id': self.id,
+            'height': self.height, 'width': self.width,
+        }
+        return new_dic
+
     def update(self, *args, **kwargs):
         """Enable attributes of and instance to be updated"""
         if len(args) > 0:
@@ -34,7 +42,7 @@ class Rectangle(Base):
     def __str__(self):
         """Allows for printing format str to stdout"""
         return (
-            f"[Rectangle] ({self.id}) "
+            f"[{type(self).__name__}] ({self.id}) "
             f"{self.__x}/{self.__y} - "
             f"{self.__width}/{self.__height}"
         )
