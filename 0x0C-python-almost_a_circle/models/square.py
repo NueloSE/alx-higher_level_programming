@@ -19,3 +19,21 @@ class Square(Rectangle):
             f"{self.x}/{self.y} - "
             f"{self.width}"
         )
+
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
+
+    def update(self, *args, **kwargs):
+        if len(args) > 0:
+            attrs = ['id', 'size', 'x', 'y']
+            for attr, arg in zip(attrs, args):
+                setattr(self, attr, arg)
+        else:
+            for key, val in kwargs.items():
+                setattr(self, key, val)
