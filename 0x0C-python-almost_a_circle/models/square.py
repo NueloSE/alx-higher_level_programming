@@ -22,14 +22,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """A getter for size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """A setter for size"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Updates the value of size"""
         if len(args) > 0:
             attrs = ['id', 'size', 'x', 'y']
             for attr, arg in zip(attrs, args):
