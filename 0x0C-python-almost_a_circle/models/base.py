@@ -28,17 +28,13 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """A method that saves class attribute in json format to a file"""
-        if list_objs[0]:
-            filename = type(list_objs[0]).__name__ + '.json'
-            list_dict = [obj.to_dictionary() for obj in list_objs]
-
-        else:
-            filename = type(None).__name__ + '.json'
-            list_dict = None
-
-        json_obj = cls.to_json_string(list_dict)
+        filename = cls.__name__ + '.json'
         with open(filename, 'w') as afile:
-            afile.write(json_obj)
+            if list_objs is None:
+                afile.write('[]')
+            else:
+                list_dict = [obj.to_dictionary() for obj in list_objs]
+                afile.write(cls.to_json_string(list_dict))
 
     @staticmethod
     def from_json_string(json_string):
