@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Model name: ``base``"""
 import json
+import os
 
 
 class Base:
@@ -53,3 +54,19 @@ class Base:
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """A method that loads from a file"""
+        filename = cls.__name__ + '.json'
+        if not os.path.exists(filename):
+            return []
+        else:
+            with open(filename, 'r') as afile:
+                json_str = afile.read()
+                json_dic = cls.from_json_string(json_str)
+                instances = []
+                for jdict in (json_dic):
+                    instance = cls.create(**jdict)
+                    instances.append(instance)
+                return instances
