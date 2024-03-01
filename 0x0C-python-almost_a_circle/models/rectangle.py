@@ -118,7 +118,7 @@ class Rectangle(Base):
     def x(self, value):
         """x setter method"""
         self._is_int({'x': value})
-        self._greater_than_zero({'x': value})
+        # self._greater_than_zero({'x': value})
         self._less_than_zero({'x': value})
         self.__x = value
 
@@ -131,6 +131,6 @@ class Rectangle(Base):
     def y(self, value):
         """y setter method"""
         self._is_int({'y': value})
-        self._greater_than_zero({'y': value})
+        # self._greater_than_zero({'y': value})
         self._less_than_zero({'y': value})
         self.__y = value
