@@ -3,6 +3,7 @@
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -74,38 +75,41 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Saves to a csv file"""
-        filename = cls.__name__ + '.csv'
-        with open(filename, 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile)
+        """Write the CSV serialization of a list of objects to a file.
+        Args:
+            list_objs (list): A list of inherited Base instances.
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
-                csvfile.write('[]')
+                csvfile.write("[]")
             else:
-                if cls.__name__ == 'Rectangle':
-                    for obj in list_objs:
-                        writer.writerow([obj.id, obj.width,
-                                        obj.height, obj.x, obj.y])
-                elif cls.__name__ == 'Square':
-                    for obj in list_objs:
-                        writer.writerow([obj.id, obj.size,
-                                        obj.height, obj.x, obj.y])
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
-        """Loads obj from a csv"""
-        filename = cls.__name__ + '.csv'
-        instances = []
-        if not os.path.exists(filename):
-            return instances
-        with open(filename, 'r', newline='') as csvfile:
-            reader = csv.reader(csvfile)
-            for row in reader:
-                if cls.__name__ == 'Rectangle':
-                    instance = cls.create(id=int(row[0]), width=int(row[1]),
-                                          height=int(row[2]), x=int(row[3]),
-                                          y=int(row[4]))
-                elif cls.__name__ == "Square":
-                    instance = cls.create(id=int(row[0]), size=int(row[1]),
-                                          x=int(row[2]), y=int(row[3]))
-                instances.append(instance)
-        return instances
+        """Return a list of classes instantiated from a CSV file.
+        Reads from `<cls.__name__>.csv`.
+        Returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
