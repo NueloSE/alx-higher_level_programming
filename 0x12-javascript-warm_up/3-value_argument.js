@@ -3,7 +3,9 @@
 const { argv } = require('process');
 
 if (argv[2]) {
-  console.log('Argument found');
+  for (let i = 2; argv[i]; i++) {
+    console.log(`${argv[i]}`);
+  }
 } else {
   console.log('No argument');
 }
