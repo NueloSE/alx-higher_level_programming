@@ -6,7 +6,7 @@ function secondBiggest (myArr) {
   let first = myArr[0];
   let second = -Infinity;
 
-  for (let i = 2; i < myArr.length; i++) {
+  for (let i = 1; i < myArr.length; i++) {
     if (myArr[i] > first) {
       second = first;
       first = myArr[i];
@@ -17,6 +17,8 @@ function secondBiggest (myArr) {
   return second;
 }
 
+const argvCpy = (argv.slice(2)).map(Number);
+
 if (argv.length <= 3) {
   console.log(0);
-} else { console.log(secondBiggest(argv)); }
+} else { console.log(secondBiggest(argvCpy)); }
