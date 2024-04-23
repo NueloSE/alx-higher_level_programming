@@ -2,8 +2,9 @@
 
 const { argv } = require('process');
 
-if (argv[2] === undefined) { console.log('Missing size'); }
 const squareSize = Number(argv[2]);
+
+if (Number(argv[2]) !== squareSize) { console.log('Missing size'); }
 for (let row = 0; row < squareSize; row++) {
   console.log('X'.repeat(squareSize));
 }
