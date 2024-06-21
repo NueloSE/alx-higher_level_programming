@@ -4,7 +4,7 @@
 
 const list = require('./100-data').list;
 
-const newList = list.map((x) => x * list.indexOf(x));
+const newList = list.map((element, indx) => element * indx);
 
 console.log(list);
 console.log(newList);
