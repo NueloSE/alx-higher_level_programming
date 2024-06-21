@@ -8,8 +8,8 @@ class Square extends oldSquare {
 
   charPrint (c = 'X') {
     // this.print();
-	for (let row = 0; row < this.height; row++) { console.log(`${c}`.repeat(this.width)); }
-}
+    for (let row = 0; row < this.height; row++) { console.log(`${c}`.repeat(this.width)); }
+  }
 }
 
 module.exports = Square;
