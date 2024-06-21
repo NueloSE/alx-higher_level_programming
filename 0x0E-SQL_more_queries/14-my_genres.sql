@@ -11,5 +11,5 @@ SELECT
 	name
 FROM tv_show_genres tsg
 JOIN tv_genres tg ON tsg.genre_id = tg.id
-WHERE show_id = '8';
-ORDER BY name
+WHERE show_id = '8'
+ORDER BY name;
