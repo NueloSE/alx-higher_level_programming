@@ -12,5 +12,5 @@ SELECT
 FROM tv_show_genres tsg
 JOIN tv_genres tg ON tsg.genre_id = tg.id
 RIGHT JOIN tv_shows ts ON tsg.show_id = ts.id
-ORDER BY title ASC;
+ORDER BY title ASC, name ASC;
 
