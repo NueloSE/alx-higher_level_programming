@@ -12,7 +12,6 @@ Your code should not be executed when imported
 import sys
 import MySQLdb
 
-print(f"omo this is argument 1: {sys.argv[0]}")
 conn = MySQLdb.connect(
     host="localhost",
     port=3306,
