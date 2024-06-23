@@ -17,6 +17,10 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
+    """
+    Access to the database and get the states
+    from the database.
+    """
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
