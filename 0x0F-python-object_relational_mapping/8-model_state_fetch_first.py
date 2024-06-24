@@ -29,8 +29,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    session = Session()
+    state = Session().get(State, 1)
 
-    states = session.get(State, 1)
-    if states:
-        print("{}: {}".format(states.id, states.name))
+    if state:
+        print("{}: {}".format(state.id, state.name))
