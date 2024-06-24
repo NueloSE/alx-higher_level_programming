@@ -31,9 +31,10 @@ if __name__ == "__main__":
     )
 
     cur = conn.cursor()
-    querry = "SELECT * FROM states WHERE BINARY \
-        name = BINARY (%s) ORDER BY id ASC"
-    cur.execute(querry, (sys.argv[4],))
+    # querry = "SELECT * FROM states WHERE BINARY \
+    #     name = BINARY (%s) ORDER BY id ASC"
+    # cur.execute(querry, (sys.argv[4],))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".format(sys.argv[4]))
     querry_row = cur.fetchall()
     for row in querry_row:
         print(row)
