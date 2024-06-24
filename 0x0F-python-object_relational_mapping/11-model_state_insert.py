@@ -29,5 +29,7 @@ if __name__ == "__main__":
     new_state = State(name="Louisiana")
     session.add(new_state)
 
-    for state in session.query(State).filter(State.name == "Louisiana"):
-        print(state.id)
+    # for state in session.query(State).filter(State.name == "Louisiana"):
+    #     print(state.id)
+    last_add = session.query(State).filter_by(name='Louisiana').order_by(State.id.desc()).first()
+    print(last_add.id)
