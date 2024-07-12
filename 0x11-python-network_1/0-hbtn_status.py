@@ -14,10 +14,10 @@ if __name__ == "__main__":
     urlToFetch = 'https://alx-intranet.hbtn.io/status'
     with urllib.request.urlopen(urlToFetch) as response:
         html = response.read()
-    output = "Body response:\n\t- \
-            type: {}\n\t- \
-            content: {}\n\t- \
-            utf content: {}"
+    output = "Body response:\n\t- "\
+             "type: {}\n\t- "\
+             "content: {}\n\t- "\
+             "utf content: {}"
     print(
         output.format(type(html), html, html.decode('utf-8'))
     )
