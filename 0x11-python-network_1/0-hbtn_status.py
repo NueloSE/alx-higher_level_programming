@@ -17,7 +17,7 @@ if __name__ == "__main__":
     output = "Body response:\n\t- "\
              "type: {}\n\t- "\
              "content: {}\n\t- "\
-             "utf content: {}"
+             "utf8 content: {}"
     print(
         output.format(type(html), html, html.decode('utf-8'))
     )
