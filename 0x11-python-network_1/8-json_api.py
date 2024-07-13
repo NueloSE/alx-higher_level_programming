@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-A  Python script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
+A  Python script that takes in a letter and sends a POST request to
+http://0.0.0.0:5000/search_user with the letter as a parameter.
 
 The letter must be sent in the variable q
 If no argument is given, set q=""
-If the response body is properly JSON formatted and not empty, display the id and name like this: [<id>] <name>
+If the response body is properly JSON formatted and not empty,
+display the id and name like this: [<id>] <name>
 Otherwise:
 Display Not a valid JSON if the JSON is invalid
 Display No result if the JSON is empty
@@ -34,7 +36,7 @@ def main():
             else:
                 print('No result')
         except ValueError:
-          print('Not a valid JSON')
+            print('Not a valid JSON')
     except requests.RequestException as e:
         print(f'Request failed: {e}')
 
