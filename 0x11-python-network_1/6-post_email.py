@@ -19,7 +19,7 @@ def main():
     emailAddress = argv[2]
     r = requests.post(url, data={'email': emailAddress})
 
-    print(f'Your email is: {r.text}')
+    print(r.text)
 
 
 if __name__ == "__main__":
