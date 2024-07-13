@@ -24,9 +24,11 @@ def main():
     url = "https://api.github.com/user"
 
     r = requests.get(url, auth=HTTPBasicAuth(username=username, password=pat))
-    response = r.json()
-    if response:
+    if r.status_code == 200:
+        response = r.json()
         print(f"{response['id']}")
+    else:
+        print(None)
 
 
 if __name__ == "__main__":
