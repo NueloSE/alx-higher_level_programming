@@ -15,7 +15,7 @@ import requests
 def main():
     repoName = argv[1]
     ownerName = argv[2]
-    url = f"https://api.github.com/repos/{repoName}/{ownerName}/commits"
+    url = f"https://api.github.com/repos/{ownerName}/{repoName}/commits"
 
     r = requests.get(url)
 
